@@ -1,42 +1,34 @@
 import React from "react";
 import { ReactP5Wrapper } from "react-p5-wrapper";
-import "../styles/FractalTree.css";
+import "../styles/FractalTree.css";  // Keep the same CSS file
 
-let angle;
+const heartSketch = p5 => {
+  const heartPattern = [
+    [2, 3], [7, 3], [1, 1], [2, 7], [6, 2], [2, 4], [4, 7],
+    [1, 5], [5, 1], [6, 5], [1, 6], [2, 0], [5, 6], [3, 7],
+    [7, 4], [3, 0], [1, 2], [4, 0]
+  ];
 
-const Sketch = p5 => {
   p5.setup = () => {
     p5.createCanvas(400, 400, "transparent");
-    angle = p5.PI / 4;
-    p5.stroke(255);
+    p5.noLoop();  // Only draw once if it's static
   };
 
   p5.draw = () => {
     p5.clear();
-    p5.translate(200, p5.height);
-    angle = p5.map(p5.sin(p5.frameCount * 0.01), -1, 1, p5.PI / 2, p5.PI / 16); // vary the angle using sin()
-    branch(100);
+    p5.background(0);  // Black background
+    p5.fill(255, 0, 0);  // Red color for the heart
+    
+    const gridSize = 50; // Define grid size for placing points
+    heartPattern.forEach(([x, y]) => {
+      p5.ellipse(x * gridSize + gridSize / 2, y * gridSize + gridSize / 2, 20, 20);  // Draw a heart point
+    });
   };
-
-  function branch(len) {
-    p5.line(0, 0, 0, -len);
-    p5.translate(0, -len);
-    if (len > 4) {
-      p5.push();
-      p5.rotate(angle);
-      branch(len * 0.67);
-      p5.pop();
-      p5.push();
-      p5.rotate(-angle);
-      branch(len * 0.67);
-      p5.pop();
-    }
-  }
 };
 
 const FractalTree = () => (
   <div id="fractal-tree">
-    <ReactP5Wrapper sketch={Sketch} />
+    <ReactP5Wrapper sketch={heartSketch} />
   </div>
 );
 
