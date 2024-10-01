@@ -35,9 +35,8 @@ class About extends React.Component {
 
     const tech_stack = [
       "Python",
-      "React.js",
-      "Java",
       "Javascript ES6+",
+      "Java",
       "C#"
     ];
 
