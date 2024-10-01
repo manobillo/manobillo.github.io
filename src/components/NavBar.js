@@ -29,7 +29,7 @@ class NavBar extends React.Component {
               <Nav.Link href="https://github.com/manobillo" target="_blank">
                 <GitHubIcon style={{ fontSize: 19 }}></GitHubIcon>
               </Nav.Link>
-              <Nav.Link href="https://www.linkedin.com/in/https://www.linkedin.com/in/maheen-khan-657591216//" target="_blank">
+              <Nav.Link href="in/https://www.linkedin.com/in/maheen-khan-657591216//" target="_blank">
                 <LinkedInIcon style={{ fontSize: 21 }}></LinkedInIcon>
               </Nav.Link>
             </Nav>
