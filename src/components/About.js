@@ -29,7 +29,7 @@ class About extends React.Component {
     const two = (
       <p>
         Outside of work, I'm interested in following the developments of
-        artifical intelligence. I also play a lot of video games. And take photos.
+        artifical intelligence. I also play a lot of video games. And take film and digital photos.
       </p>
     );
 
@@ -37,7 +37,11 @@ class About extends React.Component {
       "Python",
       "Javascript ES6+",
       "Java",
-      "C#"
+      "C#",
+      "TensorFlow",
+      "PyTorch",
+      "Kubernetes",
+      "Docker"
     ];
 
     return (

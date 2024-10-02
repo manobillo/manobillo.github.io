@@ -28,17 +28,16 @@ class Intro extends React.Component {
         <FractalTree></FractalTree>
         <Typist avgTypingDelay={120}>
           <span className="intro-title">
-            {"hi, "}
+            {" "}
             <span className="intro-name">{"maheen"}</span>
-            {" here."}
+            {" khan."}
           </span>
         </Typist>
         <FadeInSection>
-          <div className="intro-subtitle">I create stuff sometimes.</div>
+          <div className="intro-subtitle">i think in constant time complexity.</div>
           <div className="intro-desc">
             I'm a SWE masters graduate from Chicago, USA. I'm fascinated by
-            large-scale, high-impact products and contributed to major feature launches in
-            industry-leading services as well as apps that have 100M+ installs.
+            artifical intelligence and hope to code alongside them.
           </div>
           <a
             href="mailto:maheenkhan8@icloud.com"

@@ -20,42 +20,35 @@ class Projects extends React.Component {
       activeKey: eventKey
     });
   }
+
   render() {
     const spotlightProjects = {
       "Stock Price Prediction with MLOps": {
        title: "automating stock predictions",
-        //desc:
-        //  "A third-person survival-mode game where you battle against time and space to return to Earth.",
+        desc:
+          "An automated predictor of various stocks using machine learning DevOps.",
         techStack: "Python (TENSORFLOW)",
         link: "https://github.com/odmoon/mlops-stock-price-prediction",
-        open: "",
-        //image: ""
+        open: "https://github.com/odmoon/mlops-stock-price-prediction",
+        image: "/assets/image.png"
+      }
+
+    };
+    const projects = {
+      "Stock Price Prediction with MLOps": {
+        desc:
+          "An automated predictor of various stocks using machine learning DevOps.",
+        techStack: "Python (TensorFlow)",
+        link: "https://github.com/odmoon/mlops-stock-price-prediction",
+        open: "https://github.com/odmoon/mlops-stock-price-prediction"
       },
       "Basilisk Storage Data Application": {
-        title: "basilisk",
         desc:
           "A solution to secure and private self-storage to encrypt information for the user to own their own data.",
         techStack: "Java, JavaScript",
         link: "https://github.com/RLennon24/Basilisk--SE-491/",
-        open: "https://github.com/RLennon24/Basilisk--SE-491/",
-       // image: "/assets/talltales.png"
-      },
-    };
-    const projects = {
-      "TDSB Homework Management Interface": {
-        desc:
-          "An application created for Toronto District School Board, with a Flask back-end and a Vue front-end.",
-        techStack: "Python (Flask), Vue.js, Bootstrap, SQL",
-        link: "https://github.com/gazijarin/TDSBHomeworkManagement",
-        open: "https://tdsb-app.herokuapp.com/"
-      },
-      "Adam A.I.": {
-        desc:
-          "A self-learning A.I. that learns to traverse through a complex maze using the genetic algorithm.",
-        techStack: "Javascript, HTML / CSS",
-        link: "https://github.com/gazijarin/adamai",
-        open: "https://gazijarin.github.io/AdamAI/"
-      },
+        open: "https://github.com/RLennon24/Basilisk--SE-491/"
+      }
     //  "Distributed Logging and Monitoring System": {
     //    desc:
     //      "A system that establishes an ORM connection to a Prisma client in order to communicate logs from microservices.",
@@ -77,13 +70,7 @@ class Projects extends React.Component {
         //link: "https://github.com/gazijarin/gamecentre",
        // open: ""
   //    },
-      "Minimax Stonehenge": {
-        desc:
-          "Two-player, zero-sum game with a strategic Minimax artificial intelligence.",
-        techStack: "Python",
-        link: "https://github.com/gazijarin/stonehenge",
-        open: ""
-      }
+
    };
 
     return (
@@ -92,7 +79,7 @@ class Projects extends React.Component {
           <span className="section-title">/ pet projects</span>
         </div>
         <Carousel>
-          {Object.keys(spotlightProjects).map((key, i) => (
+         // {Object.keys(spotlightProjects).map((key, i) => (
             <Carousel.Item>
               <img
                 className="d-block w-100"
