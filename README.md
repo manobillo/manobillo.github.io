@@ -28,6 +28,7 @@
    yarn run build
    ```
 
+homepage: https://manobillo.github.io
 
 ## 🎨 color codes
 
