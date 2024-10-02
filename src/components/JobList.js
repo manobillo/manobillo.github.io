@@ -82,7 +82,7 @@ const JobList = () => {
   const [value, setValue] = React.useState(0);
 
   const experienceItems = {
-    "Northwestern": {
+    Northwestern: {
       jobTitle: "Senior Clinical Researcher - Data Manager @",
       duration: "JAN 2022 - PRESENT",
       desc: [
