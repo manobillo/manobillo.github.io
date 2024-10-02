@@ -9,7 +9,7 @@ import "./App.css";
 import "./styles/Global.css";
 import "rsuite/dist/styles/rsuite-default.css";
 
-function App() {
+function App() { 
   return (
     <div className="App">
       <NavBar></NavBar>
