@@ -89,6 +89,15 @@ const JobList = () => {
         "Studied multiple clinical data study protocols to produce regulatory compliant data for analysis and support FDA submission of clinical cancer trials.",
         "Acted as the point of contact for daily study activities, collaborating with internal teams and external sponsors to resolve data issue, by implementing hands-on solutions to data management challenges by implementing Python scripts for automated query optimization."
       ]
+    },
+    "Orange Gate": {
+      jobTitle: "Software Developer Intern @",
+      duration: "MAY 2019 - AUG 2019",
+      desc: [
+        "Developed a Node.js smart home system through Facebook’s Messenger integrated with Bocco sensors and other smart devices (Nest camera, TPLink smart plugs) to derive conclusions about the current state of the home",
+        "Identified continuous improvements in data quality, design reports and coding activities, presenting results and findings to internal business stakeholders.",
+        "Relevant technologies/tools used: DialogFlow, Vision, AutoML, Messenger Bot API, MongoDB."
+      ]
     }
   };
 
