@@ -41,7 +41,7 @@ class Projects extends React.Component {
        // image: "/assets/talltales.png"
       },
     };
-   // const projects = {
+    const projects = {
    //   "TDSB Homework Management Interface": {
    //     desc:
     //      "An application created for Toronto District School Board, with a Flask back-end and a Vue front-end.",
@@ -84,7 +84,7 @@ class Projects extends React.Component {
        // link: "https://github.com/gazijarin/stonehenge",
        // open: ""
     //  }
-   // };
+   };
 
     return (
       <div id="projects">
