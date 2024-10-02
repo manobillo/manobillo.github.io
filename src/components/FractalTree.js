@@ -2,36 +2,64 @@ import React from "react";
 import { ReactP5Wrapper } from "react-p5-wrapper";
 import "../styles/FractalTree.css";
 
-let angle;
+let t;
+let size;
 
-const Sketch = p5 => {
+const Sketch = (p5) => {
   p5.setup = () => {
-    p5.createCanvas(400, 400, "transparent");
-    angle = p5.PI / 4;
-    p5.stroke(255);
+    p5.createCanvas(512, 512);
+    p5.background(0);
+    t = 0;
+    size = 300;
   };
 
   p5.draw = () => {
-    p5.clear();
-    p5.translate(200, p5.height);
-    angle = p5.map(p5.sin(p5.frameCount * 0.01), -1, 1, p5.PI / 2, p5.PI / 16); // vary the angle using sin()
-    branch(100);
-  };
+    p5.translate(p5.width / 2, p5.height / 2);
+    p5.rotate(p5.PI / 2);
+    let r = 100;
+    p5.stroke(255);
+    p5.noFill();
+    p5.strokeWeight(1);
 
-  function branch(len) {
-    p5.line(0, 0, 0, -len);
-    p5.translate(0, -len);
-    if (len > 4) {
-      p5.push();
-      p5.rotate(angle);
-      branch(len * 0.67);
-      p5.pop();
-      p5.push();
-      p5.rotate(-angle);
-      branch(len * 0.67);
-      p5.pop();
+    const da = p5.PI / 100;
+    const dx = 0.2;
+    let xoff = 0;
+
+    p5.beginShape();
+
+    for (let a = -p5.PI / 2; a <= p5.PI / 2; a += da) {
+      let n = p5.noise(xoff, t);
+      r = p5.sin(2 * a) * p5.map(n, 0, 1, 50, 325);
+      let x = r * p5.cos(a);
+      let y = r * p5.sin(a);
+      let colorvar = p5.frameCount;
+      xoff += dx;
+      let rColor = p5.map(colorvar, 0, p5.width, p5.random(230), 255);
+      let gColor = p5.map(colorvar, 0, p5.width, p5.random(210), 255);
+      let bColor = p5.map(colorvar, 0, p5.height, p5.random(250), 255);
+      p5.stroke(rColor, gColor, bColor, 15);
+      p5.vertex(x, y);
     }
-  }
+
+    for (let a = p5.PI / 2; a <= 3 * p5.PI / 2; a += da) {
+      let n = p5.noise(xoff, t);
+      r = p5.sin(2 * a) * p5.map(n, 0, 1, 50, 325);
+      let x = r * p5.cos(a);
+      let y = r * p5.sin(a);
+      xoff -= dx;
+      let rColor = p5.map(colorvar, 0, p5.width, p5.random(230), 255);
+      let gColor = p5.map(colorvar, 0, p5.width, p5.random(210), 255);
+      let bColor = p5.map(colorvar, 0, p5.height, p5.random(250), 255);
+      p5.stroke(rColor, gColor, bColor, 15);
+      p5.vertex(x, y);
+    }
+
+    t += 0.01;
+    if (p5.frameCount % 500 === 1) {
+      p5.background(0);
+    }
+    p5.endShape(p5.CLOSE);
+  };
 };
 
 const FractalTree = () => (
