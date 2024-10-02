@@ -82,14 +82,14 @@ const JobList = () => {
   const [value, setValue] = React.useState(0);
 
   const experienceItems = {
-    Northwestern: {
+    "Northwestern": {
       jobTitle: "Senior Clinical Researcher - Data Manager @",
       duration: "JAN 2022 - PRESENT",
       desc: [
         "Studied multiple clinical data study protocols to produce regulatory compliant data for analysis and support FDA submission of clinical cancer trials.",
         "Acted as the point of contact for daily study activities, collaborating with internal teams and external sponsors to resolve data issue, by implementing hands-on solutions to data management challenges by implementing Python scripts for automated query optimization."
       ]
-    },
+    }
   };
 
   const handleChange = (event, newValue) => {
