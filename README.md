@@ -25,7 +25,7 @@
 1. Generate a full static production build
 
    ```sh
-   yarn run build
+   yarn deploy
    ```
 
 homepage: https://manobillo.github.io
