@@ -39,15 +39,15 @@ class Projects extends React.Component {
         desc:
           "An automated predictor of various stocks using machine learning DevOps.",
         techStack: "Python (TensorFlow)",
-        link: "https://github.com/odmoon/mlops-stock-price-prediction",
-        open: "https://github.com/odmoon/mlops-stock-price-prediction"
+        link: "https://github.com/manobillo/StockPricePredictions",
+        open: "https://github.com/manobillo/StockPricePredictions"
       },
       "Basilisk Storage Data Application": {
         desc:
           "A solution to secure and private self-storage to encrypt information for the user to own their own data.",
         techStack: "Java, JavaScript",
-        link: "https://github.com/RLennon24/Basilisk--SE-491/",
-        open: "https://github.com/RLennon24/Basilisk--SE-491/"
+        link: "https://github.com/manobillo/Basilisk",
+        open: "https://github.com/manobillo/Basilisk"
       }
     //  "Distributed Logging and Monitoring System": {
     //    desc:
