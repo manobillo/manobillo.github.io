@@ -87,10 +87,24 @@ const JobList = () => {
       duration: "JAN 2022 - PRESENT",
       desc: [
         "Studied multiple clinical data study protocols to produce regulatory compliant data for analysis and support FDA submission of clinical cancer trials.",
-        "Acted as the point of contact for daily study activities, collaborating with internal teams and external sponsors to resolve data issues, by implementing hands-on solutions to data management challenges by implementing Python scripts for automated query optimization."
+        "Acted as the point of contact for daily study activities, collaborating with internal teams and external sponsors to resolve data issue, by implementing hands-on solutions to data management challenges by implementing Python scripts for automated query optimization."
+      ]
+    },
+    "ComplyALIGN": {
+      jobTitle: "Technical Support Tier 2 @",
+      duration: "FEB 2015 - JAN 2021",
+      desc: [
+        "Provided help desk support for clients over the phone.",
+        "Developed and installed graphics on client websites, as well as maintained the network and domain infrastructure.",
+        "Took part in QA testing of product releases."
       ]
     }
   };
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <div className={classes.root}>
       <Tabs
